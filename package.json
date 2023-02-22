@@ -4,7 +4,7 @@
   "description": "A website where anyone can get information about the weather",
   "main": "/src/app.js",
   "scripts": {
-    "live": "nodemon /src/app.js"
+    "live": "nodemon ./src/app.js"
   },
   "keywords": [],
   "author": "Meance",
