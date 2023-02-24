@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {{>styleLink}}
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="./js/script.js" defer></script>
+  <title>Weather App Home</title>
+</head>
+<body>
+  {{>mobileMsg}}
+  <div id="global-container">
+    {{>header}}
+
+    <div id="content">
+      <div class="content-left">
+       
+       <div class="content-header">
+
+        <p>WELCOME !!! to <span id="site-name">WEATHER APP</span>.</p>
+        <p> Our app provides reliable information about the weather in a determinated location. Additionally, we offer a geolocation service.</p>
+
+        <img src="./images/cloud.png" alt="A cloud image"/>
+       </div>
+       <div class="content-boxes">
+        <div id='box' class="box1">
+          <h3>Service 1 - Weather</h2>
+          <p>We use an end point API to get you the most update information about the weather in a specific area. <a href="https://weatherstack.com/" title="Redirect to Weather API">Read about the API</a></p>
+        </div>
+        <div id='box' class="box2">
+          <h3>Service 2 - Geolocation</h2>
+          <p>We use an API to determine the location based on coordinates. You can also get the coordinate for a location. <a href="https://geoapify.com/">Link API</a></p>
+        </div>
+       </div>
+      </div>
+      <div class="content-right">
+        <img src="./images/sun.png" width="120" height="120" alt="Image of a sunny weather"/>
+        <img src="./images/cloudy.png" width="120" height="120" alt="Image of a cloudy weather"/>
+        <img src="./images/windy.png" width="120" height="120" alt="Image of a windy weather"/>
+        <img src="./images/rain.png" width="120" height="120" alt="Image of a rainy weather"/>
+        <img src="./images/snow.png" width="120" height="120" alt="Image of a snow weather"/>
+        <img src="./images/tornado.png" width="120" height="120" alt="Image of a tornado"/>
+      </div>
+     </div>
+    {{>dialogFeedback}}
+    {{>footer}}
+ 
+  </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ {{>styleLink}} 
+ <link rel='stylesheet' href='./css/help.css' />
+ <script type="text/javascript" src="./js/help.js" defer></script>
+ <title>Help</title>
+</head>
+  
+<body>
+    {{>mobileMsg}}
+    <div id="global-container">
+        <div id="header-colored-bar">
+            <div id='red'></div>
+            <div id='orange'></div>
+            <div id='green'></div>
+        </div>
+
+    {{>header}}
+    
+
+  <main>
+    <section id="title-section">
+      <h1>Help page</h1>
+    </section>
+
+    <section id="body-section">
+       <article id='issue-reports'>
+         <p>
+           Greatings dear user, if you came to this page that means you are looking for some help about our Weather App. We apologize for any inconvenience/issue you might have encountered. Here, we provide some greats suggestions and tips about the most frequent issues so that might help you resolve yours if it is the related one.
+           Moreover, fell free to submit us your comment about the app by clicking on the box at the bottom of the page and filling out the form. Thank for being one of our members. 
+         </p>
+
+        <div id='issue-labels'>
+          <div class="labels" id='label1'>
+            <button id='button-label1' class="button">
+              Title of the issue 1
+            </button>
+            <div class='label-content'>
+              <p>
+                Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.
+              </p>
+            </div>
+          </div>
+          <div class="labels" id='label2'>
+            <button id='button-label2' class="button">
+              Title of the issue 2
+            </button>
+            <div class='label-content'>
+              <p>
+                Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.
+                Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.
+              </p>
+            </div>
+          </div>
+          <div class="labels" id='label3'>
+            <button id='button-label3' class="button">
+              Title of the issue 3
+            </button>
+            <div class='label-content'>
+              <p>
+                Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.
+              </p>
+            </div>
+          </div>
+        </div>
+         
+       </article>
+
+    </section>
+  </main>
+    
+  {{>footer}}
+</div>
+</body>
+</html>

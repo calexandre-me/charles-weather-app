@@ -1,0 +1,171 @@
+
+@media (max-width: 1350px) {
+
+div#content{
+    height: calc(100vh * 85);
+    display: contents;
+}
+
+div#content .content-right{
+    display: none;
+}
+
+div#content .content-left .content-header{
+    width: fit-content;
+    height: fit-content;
+    margin: 10px;
+    background-color: antiquewhite;
+    padding: 5px;
+    word-wrap: break-word ;
+}
+
+div.content-boxes{
+    flex-direction: column;
+    width: 95%;
+    margin: 10px auto 0 auto;
+    background-color: wheat;
+}
+
+div.content-boxes p{
+    width: 100%;
+    background-color: black;
+}
+
+/*Customize the footer section for mobile*/
+
+
+/* 
+    #global-container{
+        overflow-y: hidden;
+    }
+    #header{
+        width: 100vw;
+        min-height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0; 
+        
+        transition: top 1s ease;
+        display: none;
+    }
+    nav#control-header ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10; 
+        background-color: rgb(244, 246, 246);
+    }
+    
+    #global-container .open-icon,
+    nav div.close-icon{
+        position: absolute;
+        top: 20px;
+    }
+
+    div#global-container .open-icon {display: block; left: 20px;}
+    nav div.close-icon {right: 20px;}
+
+    nav ul#main-menu li.active{
+        margin-bottom: 25px;
+    }
+
+    nav ul#main-menu li:not(.active){
+        margin: 20px;
+    }
+    
+    #header nav ul#main-menu li:hover:not(.active){
+        border-bottom: none;
+    }
+
+    nav ul#main-menu li a{
+        font-size: 24px;
+    }
+
+    .icons-social-media{
+        padding-top: 25px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .fa-brands{
+        font-size: 30px;
+        background-color: azure;
+        color: black;
+        border: none;
+        outline: none;
+    }
+
+    div#content{
+        grid-template-rows: auto auto;
+        display: block;
+        gap: 10px;
+    }
+
+   nav{
+        
+    }
+
+    nav ul#main-menu{
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0; 
+        background-color: azure;
+        transition: top 1s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 10; 
+    }
+
+    nav ul#main-menu li.active{
+        margin-bottom: 25px;
+    }
+
+    nav ul#main-menu li:not(.active){
+        margin: 20px;
+        padding: 5px;
+    }
+    
+     #header nav ul#main-menu li:hover:not(.active){
+        border-bottom: none;
+        background-color: beige;
+    }
+
+    nav ul#main-menu li a{
+        font-size: 24px;
+    }
+
+    .icons-social-media{
+        padding-top: 25px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .fa-brands{
+        font-size: 30px;
+    }
+
+    nav .open-icon,
+    nav .close-icon{
+        display: block;
+        position: absolute;
+        top: 20px;
+    }
+
+    nav .open-icon{ left: 20px;}
+
+    nav .close-icon{
+        right: 80px;
+        z-index: 15;
+        
+    } 
+ 

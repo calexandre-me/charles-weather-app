@@ -1,0 +1,131 @@
+#global-container{
+    padding-top: 0;
+}
+
+div#header-colored-bar{
+    width: 100%;
+    height: 15px;
+    display: flex;
+    flex-direction: row;
+}
+  
+ div#header-colored-bar div{
+    width: calc(100% / 3);
+    height: 100%;
+  }
+  
+div#header-colored-bar div#green{
+    background-color: #42ff42;
+  }
+div#header-colored-bar div#red{
+    background-color: #ff3d3d;
+  }
+div#header-colored-bar div#orange{
+    background-color: #f5b832;
+  }
+  
+  /*Customize the main*/
+  
+  main {
+    width: 95%;
+    height: calc(100vh * 0.78);
+    margin: 0px auto 0px auto;
+    color: #262525;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-face-color: #42ff42;
+    -o-scrollbar-face-color: #42ff42;
+    -moz-scrollbar-face-color: #42ff42;
+    position: relative;
+  }
+  /*Customize the title*/
+  main section#title-section{
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(131, 161, 210, 0.4);
+    margin: 15px 0 0px 0;
+    border-bottom: 3px solid #0e599b;
+    position:sticky;
+    top:0;
+  }
+  
+  main section#title-section h1{
+    padding-left: 15px;
+    line-height: 50px;
+  }
+  
+  main section#body-section{
+    width: 100%;
+    min-height: fit-content;
+    border-top: none;
+  }
+  
+  main section#body-section article{
+    padding: 15px;
+  }
+  
+  main section#body-section article#issue-reports{
+    background-color:  rgba(240, 255, 255, 0.5);
+  }
+  
+  main section#body-section article#issue-reports > p{
+    padding: 15px 0 45px 0;
+    font-size: 15px;
+    font-family: verdana;
+    text-align: justify;
+  }
+  
+  #issue-labels .labels{
+    height: 100%;
+    margin: 0px 0px 35px 10px;
+  }
+  
+  #issue-labels .labels button{
+    width: 100%;
+    height: 35px;
+    text-align: left;
+    padding: 0;
+    padding-left: 10px;
+    font-size: 16px;
+    font-style: italic;
+    outline: none;
+    border: 1px solid transparent;
+    background-color: #ffebe5;
+    border-radius: 10px 10px 0px 10px;
+  }
+  
+  #issue-labels .labels button::after{
+    content: '';
+    width: 10px;
+    height: 10px;
+    float: right;
+    margin-right: 25px;
+    color: green;
+    background-color: green;
+    border-radius: 50%;
+    text-align: right;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  #issue-labels .labels div.label-content{
+    width: 100%;
+    text-align: justify;
+    margin-left: auto;
+    border: 1px dotted white;
+    border-top: none;
+    border-radius: 0px 0px 10px 10px;
+    background-color: rgba(10, 235, 0, 0.2);
+    display: none;
+  }
+
+  #issue-labels .labels div.show-fix{
+    display: block;
+}
+
+  
+  #issue-labels .labels div.label-content p{
+    padding: 30px;
+  }
+  
+  

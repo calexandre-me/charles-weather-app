@@ -1,0 +1,74 @@
+@import url('general_style.css');
+
+div#content{
+    width: 98%;
+    margin: auto;
+    height: calc(100vh * 0.78);
+    background-color: rgba(240, 255, 255, 0.5);
+    padding: 45px 20px 10px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+div#content .content-left .content-header{
+    width: 80%;
+    height: 250px;
+    margin: 0px auto 0px auto;
+}
+
+div#content .content-left .content-header p{
+    font-size: 20px;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+div#content .content-left .content-header #site-name{
+    font-family: snowball;
+    font-size: 1.5em;
+}
+
+div#content .content-left .content-header img{
+    width: 55%;
+    height: 40%;
+    margin: auto;
+    display: block;
+    user-select: none;
+}
+
+div.content-boxes{
+    margin: 50px auto 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+div.content-boxes #box{
+    width: 210px;
+    height: auto;
+    overflow-y: auto;
+}
+
+div.content-boxes #box h3{
+    border-bottom: 2px solid black;
+}
+
+div.content-boxes #box p{
+    padding: 5px;
+    text-align: justify;
+    font-size: 16px;
+}
+
+div#content .content-right{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;   
+}
+
+div#content .content-right img{
+    width: 200px;
+    height: 190px;
+    user-select: none;
+}

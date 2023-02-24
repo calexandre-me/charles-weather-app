@@ -1,0 +1,148 @@
+@font-face {
+    font-family: rubik;
+    src: url("../font/Rubik-Light.ttf");
+}
+
+@font-face {
+    font-family: snowball;
+    src: url("../font/CfSnowballRegular-8xp2.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{color: blue}
+
+body{
+    background-image: url("../images/weather-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: rubik;
+}
+
+div#mobile{
+    display: none;
+    background-color: aqua;
+}
+
+#global-container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(79, 169, 248, 0.5);
+    padding-top: 10px;
+    position: relative;
+}
+
+#header, #footer{
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Style for Header*/
+#header{
+    max-height: calc(100vh * 0.20);
+    background-color: #ffffff;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+#header nav ul{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#header nav ul li.active{
+    user-select: none;
+}
+
+#header nav ul li:hover:not(.active){
+    border-bottom: 3px solid rgb(30, 30, 96);
+}
+
+#header nav ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: rgb(90, 89, 89);
+    text-transform: uppercase;
+}
+
+/*Style for dialog box*/
+.container-dialog{
+    width: 50px;
+    height: 50px;
+    background-color: aqua;
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+}
+
+.container-dialog #icon-feedback{
+    width: 100%;
+    height: 100%
+}
+
+.container-dialog #icon-feedback li.fa-comments{
+    width: 100px;
+    height: 100px;
+    color: green
+}
+
+
+
+
+.container-dialog #my-dialog{
+    display: none;
+}
+
+/*Style for FOOTER*/
+div#footer{
+    height: calc(100vh * 0.05);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: baseline;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+div#footer .social-media{
+    display: flex;
+    padding-top: 5px;
+    width: 60%;
+    justify-content: space-around;
+}
+
+
+/*Design HEADER and FOOTER for mobile and tablet*/
+
+@media (max-width: 1350px) {
+ #global-container{
+    display: none;
+ }
+
+ div#mobile{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(227, 8, 8, 0.5);
+ }
+ div#mobile p{
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+    color: white;
+    text-shadow: -3px -3px rgb(253, 54, 54), 3px 3px rgb(227, 25, 25);
+ }
+}
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>styleLink}}
+    <link rel="stylesheet" href="./css/404.css">
+    <title>404-Page</title>
+</head>
+<body>
+    {{>mobileMsg}}
+    <div id="global-container">
+        {{>header}}
+        <div id="content">
+            <div class="label-image">
+                <img src="./images/404.png" alt="404 images
+                ">
+            </div>
+            <div class="label-message">
+                <p>The page <mark>{{pageName}}</mark> you are looking for does not exist on the server.</p>
+                <p>Please enter a valid URL or click on one in the menu above.</p>
+                
+            </div>
+        </div>
+        {{>footer}}
+    </div>
+</body>
+</html>
