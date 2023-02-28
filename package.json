@@ -4,10 +4,11 @@
   "description": "A website where anyone can get information about the weather",
   "main": "/src/app.js",
   "scripts": {
-    "live": "nodemon ./src/app.js"
+    "live": "nodemon ./src/app.js",
+    "start": "node src/app,js"
   },
   "keywords": [],
-  "author": "Meance",
+  "author": "Charles Alexandre Meance",
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",

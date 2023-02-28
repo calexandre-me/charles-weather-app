@@ -7,7 +7,7 @@ searchWeather.addEventListener("submit", (event) => {
 
     const userTarget = document.getElementById("target-location").value;   
 
-    fetch(`http://localhost:3000/secure-1234-weather-info-api-get-info?address=${userTarget}`).then(response=>{
+    fetch(`/secure-1234-weather-info-api-get-info?address=${userTarget}`).then(response=>{
         response.json().then(data=>{
 console.log(data);
 
