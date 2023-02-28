@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>styleLink}}
+    <link rel="stylesheet" href="/css/forecast.css">
+    <script type="text/javascript" src="/js/forecast.js" defer></script>
+    <title>Forecast</title>
+</head>
+<body>
+    {{>mobileMsg}}
+    <div id="global-container">
+    {{>header}}
+    <div id="content">
+        <div class="title">
+            <h3>Enter a (Postal code/City/Country/) of a location in the box bellow to get a full resume of the forecasts.</h3>
+        </div>
+        <div class="search-bar">
+            <form action="">
+                <input type="text" id="target-location" placeholder="Ex: Boston"><button>Get Weather</button>
+            </form>
+        </div>
+        <div class="table-resume hide">
+            <table>
+                <caption>
+                    <h3><u>Weather resume</u></h3>
+                </caption>
+                <thead>
+                    <tr>
+                        <th>Target</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Description</td><td class="result"></td></tr>
+                    <tr><td>Temperature</td><td class="result"></td></tr>
+                    <tr><td>Wind</td><td class="result"></td></tr>
+                    <tr><td>Visibility</td><td class="result"></td></tr>
+                    <tr><td>Humidity</td><td class="result"></td></tr>
+                    <tr><td>Feelslike</td><td class="result"></td></tr>
+                </tbody>
+                <tfoot>
+                    <td colspan="2">The forecast for <span id="txt-resume"></span>. Thanks for consulting us!</td>
+                </tfoot>
+            </table>
+        </div>
+        <div class="server-message hide">
+            <p id="message">The current location is incorrect</p>
+        </div>
+    </div>
+    {{>footer}}
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+#content{
+    width: 98%;
+    height: calc(100vh * 0.76);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    margin: 5px auto 5px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#content .title h3{ font-size: 19px;}
+
+#content .search-bar form input,
+#content .search-bar form button{ 
+    height: 45px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    padding: 5px;
+}
+
+#content .search-bar form input{
+    width: 350px;
+    border-radius: 10px 0 0 10px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+#content .search-bar form input::placeholder{
+    font-size: 16px;
+}
+
+#content .search-bar form button{
+    background-color: rgb(22, 33, 146);
+    border-radius: 0 10px 10px 0;
+    color: whitesmoke;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#content .search-bar form button:hover{ transition: 200ms ease; background-color: rgb(5, 126, 5);}
+
+#content .table-resume table{
+  width: 100%;
+  max-width: 400px;
+  height: 350px;
+  margin: 0 auto;
+  display: block;
+  overflow-x: auto;
+  border-spacing: 10px;
+}
+
+#content .table-resume table caption{
+    padding-bottom: 25px;
+}
+
+#content .table-resume table td{padding: 5px; text-align: center;} 
+
+.result{
+    width: 200px;
+    border: 1px solid white;
+}
+
+.hide{
+    transition: 300ms ease-in;
+    display: none;
+}
+
+#content .server-message{
+    background-color: red;
+    padding: 10px;
+    color: white;
+}
