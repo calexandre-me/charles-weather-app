@@ -8,11 +8,12 @@ const forecast = (latitude, longitude, callback) => {
     const weatherInfos = {
       description: 'unknown',
       temperature: 'unknown',
+      feelslike: 'unknown',
       windspeed: 'unknown',
-      humidity: 'unknown',
       visibility: 'unknown',
-      feelslike: 'unknown'
+      humidity: 'unknown'     
     }
+    
     if (error) {
       console.log("There was an issue. Check your internet connection.");
     }
@@ -21,28 +22,25 @@ const forecast = (latitude, longitude, callback) => {
     }
     else {
       const currentDataInfo = response.body.current;
-
+      console.log(currentDataInfo);
+      
       const [weatherDescribe] = currentDataInfo.weather_descriptions,
             temperature = currentDataInfo.temperature,
-            windspeed = currentDataInfo.windspeed,
-            humidity = currentDataInfo.humidity,
+            feelslike = currentDataInfo.feelslike,
+            windspeed = currentDataInfo.wind_speed,
             visibility = currentDataInfo.visibility,
-            feelslike = currentDataInfo.feelslike;
-
+            humidity = currentDataInfo.humidity
+            
       weatherInfos.description = weatherDescribe;
       weatherInfos.temperature = temperature;
-      weatherInfos.windspeed = windspeed;
-      weatherInfos.humidity = humidity;
-      weatherInfos.visibility = visibility;
       weatherInfos.feelslike = feelslike;
+      weatherInfos.windspeed = windspeed;
+      weatherInfos.visibility = visibility;
+      weatherInfos.humidity = humidity;
+          
     }
-
-    //currentDataInfo.feelslike
-
     callback(weatherInfos);
-
   });
-
 }
 
 module.exports = {

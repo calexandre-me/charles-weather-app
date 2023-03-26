@@ -1,14 +1,13 @@
-<div class="container-dialog">
+<div class="container-feedback">
     <div id="icon-feedback">
         <i class="fa-solid fa-comments"></i>
     </div>
-    <dialog id="my-dialog">
-        <form action="">
-            <label for="">Name</label>
-            <input type="text">
-        
-            <label for="">Name</label>
-            <input type="text">
+    <div id="my-dialog">
+        <form method="POST" action="/comment" autocomplete="off"  >
+            
+            <input type="email" id="email" placeholder="Email" autocomplete="false"/>
+            <textarea maxlength="100" id="text-comment" placeholder="Send a 100 length message..." autocomplete="false" ></textarea>
+            <input type="submit" value="Submit" id="submit"/>
         </form>
-    </dialog>
-</div>
+    </div>
+</div> 

@@ -3,36 +3,32 @@
 <head>
   {{>styleLink}}
   <link rel="stylesheet" href="/css/index.css">
-  <script src="/js/script.js" defer></script>
   <title>Weather App Home</title>
 </head>
 <body>
-  {{>mobileMsg}}
   <div id="global-container">
     {{>header}}
-
+    {{!-- Main-content of the page --}}
     <div id="content">
-      <div class="content-left">
+      <div id="content-left-side">
        
-       <div class="content-header">
-
-        <p>WELCOME !!! to <span id="site-name">WEATHER APP</span>.</p>
-        <p> The app provides reliable information about the weather for a determinated location. Additionally, we offer a geolocation service. And IT'S FREE!!!</p>
-
-        <img src="/images/cloud.png" alt="A cloud image"/>
+       <div id="content-header">
+          <p>WELCOME !!! to <span id="site-name">WEATHER APP</span>.</p>
+          <p> The app provides reliable information about the weather for a determinated location. Additionally, we offer a geolocation service. And IT'S FREE!!!</p>
+          <img src="/images/cloud.png" alt="A cloud image" id="feature-img"/>
        </div>
-       <div class="content-boxes">
-        <div id='box' class="box1">
-          <h3>Service 1 - Weather</h2>
+       <div id="content-boxes">
+        <div class="box" id="box1">
+          <h3>S1 - Weather</h2>
           <p>We use an end point API to get you the most update information about the weather in a specific area. <a href="https://weatherstack.com/" title="Redirect to Weather API">Read about the API</a></p>
         </div>
-        <div id='box' class="box2">
-          <h3>Service 2 - Geolocation</h2>
+        <div class="box" id="box2">
+          <h3>S2 - Geolocation</h2>
           <p>We use an API to determine the location based on coordinates. You can also get the coordinate for a location. <a href="https://geoapify.com/">Link API</a></p>
         </div>
        </div>
       </div>
-      <div class="content-right">
+      <div id="content-right-side">
         <img src="/images/sun.png" width="120" height="120" alt="Image of a sunny weather"/>
         <img src="/images/cloudy.png" width="120" height="120" alt="Image of a cloudy weather"/>
         <img src="/images/windy.png" width="120" height="120" alt="Image of a windy weather"/>
@@ -41,9 +37,9 @@
         <img src="/images/tornado.png" width="120" height="120" alt="Image of a tornado"/>
       </div>
      </div>
+{{!-- Main-content of the page --}}
     {{>dialogFeedback}}
     {{>footer}}
- 
   </div>
 </body>
 </html>

@@ -3,6 +3,7 @@ const express = require('express');
 const hbs = require('hbs');
 const weather = require("./utils/forecast");
 const geo_location = require("./utils/geocode");
+const fs = require('fs');
 
 const PORT = process.env.PORT || 3000;
 
@@ -18,6 +19,8 @@ app.set('view engine', 'hbs');
 hbs.registerPartials(pathToPartials);
 
 app.use(express.static(publicRessourcesPath));
+app.use(express.urlencoded( {extended: true }))
+app.use(express.json())
 
 app.get('', (req, res) => {
     res.render('index');
@@ -43,7 +46,7 @@ app.get('/secure-1234-weather-info-api-get-info', (req, res) => {
     geo_location.geocode(userQuery.address, (error, {latitude, longitude} = {})=>{
         if(!error){
           return weather.forecast(latitude, longitude, (weatherData)=>{
-            res.send(weatherData);
+            res.send(JSON.stringify(weatherData));
           })
         }
         return res.send({
@@ -51,25 +54,6 @@ app.get('/secure-1234-weather-info-api-get-info', (req, res) => {
         })
 
     })
-    // geo_location.geocode(userQuery.address, (error, {latitude, longitude} = {})=>{
-    //     if(error){
-    //         return res.send({
-    //             error: `${error}`
-    //         })
-    //     }
-    //     else{
-    //         weather.forecast(latitude, longitude, (error, weatherData)=>{
-    //             if(!error){
-    //                 res.send(weatherData);
-    //             }
-    //             else{
-    //                res.send({
-    //                     error: `${error}`
-    //                 })
-    //             }
-    //         })
-    //     }
-    // })
 });
 //========================
 app.get('/forecast(.html)?', (req, res) => {
@@ -88,11 +72,33 @@ app.get('/help(.html)?', (req, res) => {
     res.render('help');
 });
 
+app.get('/login(.html)?', (req, res) => {
+    res.render('login');
+});
+
 app.get('*', (req, res) => {
+    console.log(req.url);
+    
+    let msg = req.url.length > 15 ? "you typed and" : req.url;  
+
     res.render('404', {
-        pageName: `${req.url}`
+        pageMsg: `${msg}`
     });
 });
+
+app.post('/comment', (req, res)=>{
+    console.log(req.body);
+    
+    return res.send({msg: 'Hey'})
+    // const data = JSON.parse(req.body);
+    // const formating = `This is a comment from ${data.email} and it says: ${data.textComment}.\n`;
+
+    // fs.appendFile(path.join(__dirname, '..', 'comments.txt'), formating, (err)=>{
+    //     if(err) throw err;
+    //     return res.send('The user\'s comment has been saved.')
+    // })
+})
+
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}...`);
